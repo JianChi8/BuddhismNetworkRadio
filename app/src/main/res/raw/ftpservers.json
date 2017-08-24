@@ -1,0 +1,7 @@
+[
+  {"name":"ftp1","server":"ftp1.amtb.tw"}, //台湾
+  {"name":"ftp2","server":"ftp2.amtb.cn"}, //江苏电信
+  {"name":"ftp8","server":"ftp8.amtb.cn"}, //云南电信
+  {"name":"ftpa","server":"ftpa.amtb.cn"}, //山西网通
+  {"name":"ftpde","server":"ftp.amtb.de"}  //德国
+]

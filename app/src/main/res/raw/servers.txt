@@ -1,0 +1,1 @@
+[{"domain":"tw1.hwadzan.com","title":"臺北"},{"domain":"bj2.hwadzan.net","title":"北京"},{"domain":"js1.amtb.cn","title":"江蘇"},{"domain":"sd1.hwadzan.net","title":"山東"},{"domain":"jp1.hwadzan.com","title":"日本"},{"domain":"de1.hwadzan.com","title":"德國"}]
