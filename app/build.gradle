@@ -7,8 +7,8 @@ android {
         applicationId "com.jianchi.fsp.buddhismnetworkradio"
         minSdkVersion 14
         targetSdkVersion 24
-        versionCode 3
-        versionName '1.2 Release'
+        versionCode 4
+        versionName '2.0.1'
     }
     buildTypes {
         release {

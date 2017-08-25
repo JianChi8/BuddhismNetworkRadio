@@ -2,65 +2,86 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contentPanel"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    android:id="@+id/contentPanel"
     tools:context="com.jianchi.fsp.buddhismnetworkradio.activity.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
     <!--640*360-->
     <FrameLayout
         android:id="@+id/player_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:background="@color/videoBG"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:background="@color/videoBG">
+
         <com.jianchi.fsp.buddhismnetworkradio.video.FullScreenVideoView
-            android:layout_width="match_parent"
-            android:layout_height="180dp"
             android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
             android:background="@drawable/zcgt"
             android:visibility="visible" />
 
+        <LinearLayout
+            android:id="@+id/videoView_top"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/banner48"
+            android:background="#00000000"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageButton
+                android:id="@+id/bt_select_server"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:background="@android:color/transparent"
+                android:padding="8dp"
+                app:srcCompat="@mipmap/ic_select" />
+
+        </LinearLayout>
+
         <RelativeLayout
             android:id="@+id/videoView_bottom"
-            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="@dimen/banner48"
             android:layout_gravity="bottom"
             android:background="@color/videoMenuBG"
+            android:contextClickable="true"
             android:gravity="center_vertical"
-            android:contextClickable="true">
+            android:orientation="horizontal">
 
             <ImageButton
+                android:id="@+id/bt_play"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
-                android:padding="8dp"
                 android:layout_margin="0dp"
-                android:id="@+id/bt_play"
-                android:src="@mipmap/ic_play"
-                android:background="@android:color/transparent" />
+                android:background="@android:color/transparent"
+                android:padding="8dp"
+                android:src="@mipmap/ic_play" />
 
             <CheckBox
+                android:id="@+id/cb_onlySound"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:text="@string/jsy"
-                android:id="@+id/cb_onlySound"
+                android:layout_margin="8dp"
                 android:checked="false"
-                android:textColor="@color/colorTitle"
-                android:layout_margin="8dp" />
+                android:text="@string/jsy"
+                android:textColor="@color/colorTitle" />
         </RelativeLayout>
 
         <ProgressBar
+            android:id="@+id/progressBar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/progressBar"
             android:layout_gravity="center"
             android:visibility="invisible" />
 

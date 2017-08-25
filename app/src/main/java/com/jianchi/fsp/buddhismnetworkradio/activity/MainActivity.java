@@ -36,6 +36,7 @@ import android.widget.VideoView;
 import com.alibaba.fastjson.JSON;
 import com.jianchi.fsp.buddhismnetworkradio.BApplication;
 import com.jianchi.fsp.buddhismnetworkradio.api.Channel;
+import com.jianchi.fsp.buddhismnetworkradio.api.ChannelType;
 import com.jianchi.fsp.buddhismnetworkradio.api.ServersList;
 import com.jianchi.fsp.buddhismnetworkradio.tools.MyLog;
 import com.jianchi.fsp.buddhismnetworkradio.R;
@@ -67,6 +68,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
      * 播放按扭
      */
     private ImageButton bt_play;
+
+    /**
+     * 播放按扭
+     */
+    private ImageButton bt_select_server;
 
     /**
      * 播放器外框
@@ -325,9 +331,25 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         bt_play = (ImageButton) findViewById(R.id.bt_play);
         bt_play.setOnClickListener(bt_playOnClickListener);
 
+        bt_select_server = (ImageButton) findViewById(R.id.bt_select_server);
+        bt_select_server.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mDrawer_layout.openDrawer(GravityCompat.END);
+            }
+        });
+
+
         //仅声音按扭
-        cb_onlySound = (CheckBox) findViewById(R.id.cb_onlySound);
-        cb_onlySound.setOnCheckedChangeListener(cb_onlySoundOnCheckedChangeListener);
+        if(channel.getChannelType() == ChannelType.淨空老法師直播) {
+            cb_onlySound = (CheckBox) findViewById(R.id.cb_onlySound);
+            cb_onlySound.setOnCheckedChangeListener(cb_onlySoundOnCheckedChangeListener);
+        } else {
+            cb_onlySound = (CheckBox) findViewById(R.id.cb_onlySound);
+            cb_onlySound.setVisibility(View.GONE);
+        }
+
+
     }
 
     MediaPlayer.OnPreparedListener videoViewOnPreparedListener=new MediaPlayer.OnPreparedListener() {
@@ -538,6 +560,7 @@ extra 	int: an extra code, specific to the error. Typically implementation depen
 
         return super.onOptionsItemSelected(item);
     }
+
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
