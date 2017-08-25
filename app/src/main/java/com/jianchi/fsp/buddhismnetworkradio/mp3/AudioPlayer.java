@@ -1,7 +1,9 @@
 package com.jianchi.fsp.buddhismnetworkradio.mp3;
 
 import android.content.Context;
+import android.media.AudioManager;
 import android.net.Uri;
+import android.os.Handler;
 
 import com.google.android.exoplayer2.DefaultLoadControl;
 import com.google.android.exoplayer2.DefaultRenderersFactory;
@@ -38,7 +40,7 @@ public class AudioPlayer {
     private ExoPlayer.EventListener mEventListener;
     private ExtractorsFactory extractorsFactory;
     private boolean shouldAutoPlay;
-
+    AudioManager am;
     public SimpleExoPlayer getPlayer() {
         return mPlayer;
     }
@@ -49,7 +51,53 @@ public class AudioPlayer {
         mContext = context;
         extractorsFactory = new DefaultExtractorsFactory();
         initializePlayer();
+        am = (AudioManager) mContext.getSystemService(Context.AUDIO_SERVICE);
     }
+
+    public void setPlayWhenReady(boolean playWhenReady) {
+        if(playWhenReady && !mPlayer.getPlayWhenReady()){
+            //需要设置开始播放
+            int result = am.requestAudioFocus(afChangeListener, AudioManager.STREAM_MUSIC, AudioManager.AUDIOFOCUS_GAIN);
+            if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
+                mPlayer.setPlayWhenReady(true);
+            }
+        } else if(!playWhenReady && mPlayer.getPlayWhenReady()) {
+            //需要设置暂停
+            if (mPlayer.getPlayWhenReady()) {
+                mPlayer.setPlayWhenReady(false);
+            }
+            //am.abandonAudioFocus(afChangeListener); // Stop playback
+        }
+    }
+
+    AudioManager.OnAudioFocusChangeListener afChangeListener = new AudioManager.OnAudioFocusChangeListener() {
+        @Override
+        public void onAudioFocusChange(int focusChange) {
+            if (focusChange == AudioManager.AUDIOFOCUS_GAIN) {
+
+            } else {
+                if (mPlayer.getPlayWhenReady()) {
+                    mPlayer.setPlayWhenReady(false);
+                }
+                //am.abandonAudioFocus(afChangeListener); // Stop playback
+            }
+/*
+            else if (focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT) {
+                if (isPlaying()) {
+                    mPlayer.setPlayWhenReady(false);
+                }
+            } else if (focusChange == AudioManager.AUDIOFOCUS_LOSS) {
+            } else if (focusChange == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
+                if (mediaPlayer.isPlaying()) {
+                    mediaPlayer.stop();
+                }
+            } else if (focusChange == AudioManager.AUDIOFOCUS_REQUEST_FAILED) {
+                if (mediaPlayer.isPlaying()) {
+                    mediaPlayer.stop();
+                }
+            }*/
+        }
+    };
 
     public void play(File file, int positionMs){
 
@@ -59,7 +107,7 @@ public class AudioPlayer {
                     fileDataSourceFactory,
                     extractorsFactory, null, null);
 
-        mPlayer.setPlayWhenReady(true);
+        setPlayWhenReady(true);
         mPlayer.seekTo(positionMs);
         mPlayer.prepare(cmediaSource, true, true);
     }
@@ -67,8 +115,8 @@ public class AudioPlayer {
     public void play(String[] urls, int windowIndex, long positionMs){
         //state = 1;
         setMediaSource(urls);
-        mPlayer.setPlayWhenReady(true);
-        mPlayer.seekTo(windowIndex, positionMs);
+        setPlayWhenReady(true);
+        seekTo(windowIndex, positionMs);
     }
 
     private void setMediaSource(String[] audioUrls) {
@@ -105,12 +153,12 @@ public class AudioPlayer {
 
     public void pause() {
         //state = 2;
-        mPlayer.setPlayWhenReady(false);
+        setPlayWhenReady(false);
     }
 
     public void play() {
         //state = 1;
-        mPlayer.setPlayWhenReady(true);
+        setPlayWhenReady(true);
     }
 
     public void release(){
@@ -124,11 +172,26 @@ public class AudioPlayer {
             RenderersFactory renderersFactory = new DefaultRenderersFactory(mContext);
             mPlayer = ExoPlayerFactory.newSimpleInstance(renderersFactory, trackSelector, new DefaultLoadControl());
             mPlayer.addListener(mEventListener);
-            mPlayer.setPlayWhenReady(shouldAutoPlay);
         }
     }
 
     public long getDuration() {
         return mPlayer.getDuration();
+    }
+
+    public int getCurrentWindowIndex() {
+        return mPlayer.getCurrentWindowIndex();
+    }
+
+    public long getCurrentPosition() {
+        return mPlayer.getCurrentPosition();
+    }
+
+    public void seekTo(int playMp3Id, long pos) {
+        mPlayer.seekTo(playMp3Id, pos);
+    }
+
+    public void stop() {
+        mPlayer.stop();
     }
 }

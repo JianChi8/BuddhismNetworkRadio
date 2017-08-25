@@ -193,8 +193,8 @@ public class Mp3Biner extends Binder implements IMusic  {
      */
     @Override
     public void moveon(int playMp3Id, int pos) {
-        mp.getPlayer().seekTo(playMp3Id, pos);
-        mp.getPlayer().setPlayWhenReady(true);
+        mp.seekTo(playMp3Id, pos);
+        mp.setPlayWhenReady(true);
     }
 
 
@@ -203,8 +203,8 @@ public class Mp3Biner extends Binder implements IMusic  {
      */
     @Override
     public void stop() {
-        mp.getPlayer().setPlayWhenReady(false);
-        mp.getPlayer().stop();
+        mp.setPlayWhenReady(false);
+        mp.stop();
         mp.release();
         mp = null;
 
@@ -312,11 +312,11 @@ public class Mp3Biner extends Binder implements IMusic  {
                             notifyEventListener.handleEvent();
                     } else {
                         //更换文件是，必然要缓存，可于此时显示状态栏
-                        int idx = mp.getPlayer().getCurrentWindowIndex();
+                        int idx = mp.getCurrentWindowIndex();
                         if (mp3Id != idx) {
                             mp3Id = idx;//在全局变量中标记当前播放位置
                             mp3.curPlayFile = mp3s[mp3Id];
-                            long pos = mp.getPlayer().getCurrentPosition();
+                            long pos = mp.getCurrentPosition();
                             mp3.postion = (int) pos;
 
                             initNotificationBar(mp3.name, mp3.curPlayFile);
@@ -333,8 +333,8 @@ public class Mp3Biner extends Binder implements IMusic  {
                 if(playbackState==STATE_BUFFERING || playbackState==STATE_READY){
                     //暂停
                     if(isLocal){
-                        mp3.postion = (int) mp.getPlayer().getCurrentPosition();//.getDuration();
-                        saveLocalProcess((int) mp.getPlayer().getCurrentPosition());
+                        mp3.postion = (int) mp.getCurrentPosition();//.getDuration();
+                        saveLocalProcess(mp3.postion);
 
                         if (notifyEventListener != null)
                             notifyEventListener.proBar(false);
@@ -343,9 +343,9 @@ public class Mp3Biner extends Binder implements IMusic  {
                         cancelNotification();
                     } else {
                         //暂停了，这时要保存进度的
-                        int idx = mp.getPlayer().getCurrentWindowIndex();
+                        int idx = mp.getCurrentWindowIndex();
                         mp3.curPlayFile = mp3s[idx];
-                        mp3.postion = (int) mp.getPlayer().getCurrentPosition();//.getDuration();
+                        mp3.postion = (int) mp.getCurrentPosition();//.getDuration();
 
                         Log.d("SaveProcess", mp3.curPlayFile + ":" + mp3.postion);
 
@@ -371,13 +371,13 @@ public class Mp3Biner extends Binder implements IMusic  {
             if(isLocal){
                 //因为是单文件播放，不会跳到下一个文件，不用管这个
             } else {
-                int idx = mp.getPlayer().getCurrentWindowIndex();
+                int idx = mp.getCurrentWindowIndex();
                 if (mp3Id != idx) {
                     //播放到了下一个文件了
                     //自动跳到下一个文件，在onPlayerStateChanged中没有相关事件
                     mp3Id = idx;//在全局变量中标记当前播放位置
                     mp3.curPlayFile = mp3s[mp3Id];
-                    long pos = mp.getPlayer().getCurrentPosition();
+                    long pos = mp.getCurrentPosition();
                     mp3.postion = (int) pos;
 
                     initNotificationBar(mp3.name, mp3.curPlayFile);

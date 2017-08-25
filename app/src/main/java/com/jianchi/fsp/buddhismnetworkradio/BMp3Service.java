@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.media.AudioManager;
 import android.os.IBinder;
 
-public class BMp3Service extends Service implements AudioManager.OnAudioFocusChangeListener {
+public class BMp3Service extends Service {
 
     Mp3Biner binder;
 
@@ -38,16 +38,4 @@ public class BMp3Service extends Service implements AudioManager.OnAudioFocusCha
         return super.onUnbind(intent);
     }
 
-    @Override
-    public void onAudioFocusChange(int focusChange) {
-        switch (focusChange) {
-            case AudioManager.AUDIOFOCUS_LOSS:
-                case AudioManager.AUDIOFOCUS_LOSS_TRANSIENT:
-                    case AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK:
-                        if (binder.mp.isPlaying()) {
-                            binder.pause();
-                        }
-                        break;
-        }
-    }
 }

@@ -10,7 +10,9 @@ import android.content.res.Resources;
 import android.media.AudioManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Handler;
 import android.os.IBinder;
+import android.telephony.TelephonyManager;
 
 import com.alibaba.fastjson.JSON;
 import com.beardedhen.androidbootstrap.TypefaceProvider;
@@ -254,15 +256,14 @@ public class BApplication extends Application {
      */
     public void initButtonReceiver() {
         mp3Receiver = new Mp3Receiver(music);
-
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(Mp3Biner.PLAY_PAUSE_BUTTON);
         registerReceiver(mp3Receiver, intentFilter);
 
-        NoisyAudioStreamReceiver noisyAudioStreamReceiver = new NoisyAudioStreamReceiver(music);
-
-        IntentFilter mNoisyFilter = new IntentFilter(AudioManager.ACTION_AUDIO_BECOMING_NOISY);
-        registerReceiver(noisyAudioStreamReceiver, mNoisyFilter);
-
+        String B_PHONE_STATE = TelephonyManager.ACTION_PHONE_STATE_CHANGED;
+        PhoneCallReceiver phoneCallReceiver = new PhoneCallReceiver(music);
+        IntentFilter phoneStateIntentFilter = new IntentFilter();
+        phoneStateIntentFilter.addAction(B_PHONE_STATE);
+        registerReceiver(phoneCallReceiver, phoneStateIntentFilter);
     }
 }

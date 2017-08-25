@@ -160,12 +160,14 @@ public class Mp3DownloadThread extends BroadcastReceiver implements Runnable{
 
     private boolean isNetworkOnline() {
         Runtime runtime = Runtime.getRuntime();
-        try {
-            Process ipProcess = runtime.exec("ping -c 1 114.114.114.114");
-            int exitValue = ipProcess.waitFor();
-            return (exitValue == 0);
-        } catch (IOException | InterruptedException e) {
-            e.printStackTrace();
+        synchronized (this) {
+            try {
+                Process ipProcess = runtime.exec("ping -c 1 114.114.114.114");
+                int exitValue = ipProcess.waitFor();
+                return (exitValue == 0);
+            } catch (IOException | InterruptedException e) {
+                e.printStackTrace();
+            }
         }
         return false;
     }
