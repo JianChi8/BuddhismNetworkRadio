@@ -52,4 +52,6 @@
     <string name="down_msg_no_wifi_net">WIFI网络连接失败</string>
     <string name="down_msg_wifi_net_ok">WIFI网络连接成功</string>
     <string name="local_mp3_explain">请点右上角“添加”下载MP3。系统会自动下载，最多下载5个，多余的将被删除。</string>
+    <string name="dialog_ok">确定</string>
+    <string name="dialog_cancle">关闭</string>
 </resources>

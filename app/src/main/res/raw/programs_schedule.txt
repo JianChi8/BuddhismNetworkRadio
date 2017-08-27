@@ -1,0 +1,5 @@
+淨空老法師直播,http://ft.hwadzan.com/mycalendar/mycalendar_embed.php?calendar_name=livetv&showview=day&valign=true&bgcolor=none&showtimecolumns=start&tvmenu=3
+文化教育,http://ft.hwadzan.com/mycalendar/mycalendar_embed.php?calendar_name=cult&showview=day&valign=true&bgcolor=none&showtimecolumns=start&tvmenu=3
+粵語節目,http://ft.hwadzan.com/mycalendar/mycalendar_embed.php?calendar_name=yueyu
+台語節目,http://ft.hwadzan.com/mycalendar/mycalendar_embed.php?calendar_name=wdmaster
+English,http://www.hwadzan.com/mycalendar/mycalendar_embed.php?calendar_name=English

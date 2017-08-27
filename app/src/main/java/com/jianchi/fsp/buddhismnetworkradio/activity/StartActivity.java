@@ -112,7 +112,7 @@ public class StartActivity extends AppCompatActivity {
         channelList.selectedChannelTitle =channelList.channels.get(0).title;
 
         //默认初始为视频节目
-        TvChannelListAdapter tvChannelListAdapter = new TvChannelListAdapter(StartActivity.this, channelList);
+        TvChannelListAdapter tvChannelListAdapter = new TvChannelListAdapter(StartActivity.this, channelList, app);
         lv_channel.setAdapter(tvChannelListAdapter);
         isTvChannel = true;
 
@@ -122,7 +122,7 @@ public class StartActivity extends AppCompatActivity {
         bt_tv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TvChannelListAdapter tvChannelListAdapter = new TvChannelListAdapter(StartActivity.this, channelList);
+                TvChannelListAdapter tvChannelListAdapter = new TvChannelListAdapter(StartActivity.this, channelList, app);
                 lv_channel.setAdapter(tvChannelListAdapter);
                 isTvChannel = true;
             }

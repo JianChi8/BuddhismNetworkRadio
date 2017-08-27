@@ -46,15 +46,7 @@ public class BApplication extends Application {
     经文讲义:http://ft.hwadzan.com/mycalendar/mycalendar_embed_livetv.php?calendar_name=livetv
     * */
 
-    public static final HashMap<ChannelType, String> programsListUrlMap = new HashMap<ChannelType, String>(){
-        {
-            put(ChannelType.淨空老法師直播,      "http://ft.hwadzan.com/mycalendar/mycalendar_embed.php?calendar_name=livetv&showview=day&valign=true&bgcolor=none&showtimecolumns=start&tvmenu=3");
-            put(ChannelType.文化教育,            "http://ft.hwadzan.com/mycalendar/mycalendar_embed.php?calendar_name=cult&showview=day&valign=true&bgcolor=none&showtimecolumns=start&tvmenu=3");
-            put(ChannelType.粵語節目,            "http://ft.hwadzan.com/mycalendar/mycalendar_embed.php?calendar_name=yueyu");
-            put(ChannelType.台語節目,            "http://ft.hwadzan.com/mycalendar/mycalendar_embed.php?calendar_name=wdmaster");
-            put(ChannelType.English,             "http://www.hwadzan.com/mycalendar/mycalendar_embed.php?calendar_name=English");
-        }
-    };
+    public HashMap<ChannelType, String> programsListUrlMap;
 
     //载入错误次数
     //public int errTimes = 0;
@@ -76,6 +68,13 @@ public class BApplication extends Application {
         TypefaceProvider.registerDefaultIconSets();
 
         testAllFtpServer();
+
+        programsListUrlMap = new HashMap<ChannelType, String>();
+        List<String> programSchedulesUrl = FileUtils.readRawAllLines(this, R.raw.programs_schedule);
+        for(String surl : programSchedulesUrl){
+            String[] ss = surl.split(",");
+            programsListUrlMap.put(Enum.valueOf(ChannelType.class, ss[0]), ss[1]);
+        }
 
         beInit = false;
 

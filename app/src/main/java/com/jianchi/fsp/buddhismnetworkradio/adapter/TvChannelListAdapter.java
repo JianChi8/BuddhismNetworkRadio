@@ -24,10 +24,12 @@ public class TvChannelListAdapter extends BaseAdapter {
     ChannelList channelList;
     private LayoutInflater mInflater;
     Context context;
-    public TvChannelListAdapter(Context context, ChannelList channelList){
+    BApplication app;
+    public TvChannelListAdapter(Context context, ChannelList channelList, BApplication app){
         this.context=context;
         this.channelList=channelList;
         this.mInflater = LayoutInflater.from(context);
+        this.app = app;
     }
     @Override
     public int getCount() {
@@ -61,7 +63,7 @@ public class TvChannelListAdapter extends BaseAdapter {
         txt.setText(TW2CN.getInstance(context).toLocalString(holder.title));
         AwesomeTextView bt_showSchedule = (AwesomeTextView) convertView.findViewById(R.id.bt_showSchedule);
         ChannelType channelType = holder.getChannelType();
-        if(BApplication.programsListUrlMap.containsKey(channelType)) {
+        if(app.programsListUrlMap.containsKey(channelType)) {
             bt_showSchedule.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

@@ -1,27 +1,18 @@
 package com.jianchi.fsp.buddhismnetworkradio.activity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.design.widget.AppBarLayout;
-import android.support.design.widget.CoordinatorLayout;
-import android.support.design.widget.NavigationView;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.util.DisplayMetrics;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
-import android.widget.AdapterView;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.FrameLayout;
@@ -35,18 +26,16 @@ import android.widget.VideoView;
 
 import com.alibaba.fastjson.JSON;
 import com.jianchi.fsp.buddhismnetworkradio.BApplication;
+import com.jianchi.fsp.buddhismnetworkradio.R;
 import com.jianchi.fsp.buddhismnetworkradio.api.Channel;
 import com.jianchi.fsp.buddhismnetworkradio.api.ChannelType;
+import com.jianchi.fsp.buddhismnetworkradio.api.Server;
 import com.jianchi.fsp.buddhismnetworkradio.api.ServersList;
 import com.jianchi.fsp.buddhismnetworkradio.tools.MyLog;
-import com.jianchi.fsp.buddhismnetworkradio.R;
-import com.jianchi.fsp.buddhismnetworkradio.adapter.ServerListAdapter;
+import com.jianchi.fsp.buddhismnetworkradio.tools.TW2CN;
 import com.jianchi.fsp.buddhismnetworkradio.video.VideoMenuManager;
-import com.jianchi.fsp.buddhismnetworkradio.api.Server;
 
-import java.util.List;
-
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity {
 
     //region 变量区
     /**
@@ -58,11 +47,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
      * 仅声音选择按扭
      */
     CheckBox cb_onlySound;
-
-    /**
-     * DrawerLayout容器
-     */
-    private DrawerLayout mDrawer_layout;
 
     /**
      * 播放按扭
@@ -100,6 +84,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     Channel channel;
 
     ServersList serversList;
+    String[] servers;
+    int yourChoice;
+    int newChoice = -1;
 
     int errTimes = 0;
 
@@ -128,9 +115,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         //获取自定义APP，APP内存在着数据，若为旋转屏幕，此处记录以前的内容
         app = (BApplication)getApplication();
 
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        WindowManager.LayoutParams params = getWindow().getAttributes();
+        params.flags |= WindowManager.LayoutParams.FLAG_FULLSCREEN;
+        getWindow().setAttributes(params);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         Intent intent = getIntent();
         channel = new Channel();
@@ -144,33 +135,128 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         serversList.selectServerCode = app.selectServerCode;
         serversList.selectCityCode = app.selectCityCode;
 
+        servers = new String[serversList.servers.size()];
+        Server selectedServer = serversList.getSelectedServer();
+        for(int i=0; i<serversList.servers.size(); i++) {
+            Server s = serversList.servers.get(i);
+            servers[i] = TW2CN.getInstance(this).toLocalString(s.title);
+            if(s==selectedServer)
+                yourChoice = i;
+        }
+
         //判断是否连接到网络
         if(!app.isNetworkConnected()){
             networkFailClose();
         }else {
-
-            //左右侧抽屉菜单初始化
-            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-            ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                    this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-            drawer.addDrawerListener(toggle);
-            toggle.syncState();
-
-            mDrawer_layout = (DrawerLayout) findViewById(R.id.drawer_layout);
-            NavigationView navigationViewR = (NavigationView) findViewById(R.id.right_nav_view);
-            View headerViewR = navigationViewR.getHeaderView(0);
-            lv_servers = (ListView) headerViewR.findViewById(R.id.lv_servers);
-
             proBar = (ProgressBar) findViewById(R.id.progressBar);
 
+
+            /**
+             * 核心函数，用来初始化视频播放器。主要功能有
+             * 1、在全屏时进行特别设置
+             * 2、处理错误数据
+             * 3、处理点击
+             */
             //初始化videoView，设置video大小，以及错误处理，以及角屏事件
-            initVideoView();
 
-            //初始化数据
-            initData();
+            //初始化三个关键变量
+            player_frame = (FrameLayout) findViewById(R.id.player_frame);
 
-            //TODO 这里要检测是恢复还是新开，叵为恢复，需要还原状态
+            videoView = (VideoView) findViewById(R.id.videoView);
+            //screenLandscape();
+
+            videoView.setVisibility(View.VISIBLE);
+            videoView.setBackgroundResource(R.drawable.zcgt);
+
+            videoView.setOnPreparedListener(videoViewOnPreparedListener);
+
+            videoView.setOnErrorListener(videoViewOnErrorListener);
+
+            //LinearLayout videoView_top = (LinearLayout)findViewById(R.id.videoView_top);
+            RelativeLayout videoView_bottom = (RelativeLayout)findViewById(R.id.videoView_bottom);
+
+            menuManager=new VideoMenuManager(MainActivity.this, videoView_bottom);//, videoView_top
+
+            videoView.setOnTouchListener(videoViewOnTouchListener);
+
+            //按放按扭
+            bt_play = (ImageButton) findViewById(R.id.bt_play);
+            bt_play.setOnClickListener(bt_playOnClickListener);
+
+            bt_select_server = (ImageButton) findViewById(R.id.bt_select_server);
+            bt_select_server.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    showServerListDialog();
+                }
+            });
+
+
+            //仅声音按扭
+            if(channel.getChannelType() == ChannelType.淨空老法師直播) {
+                cb_onlySound = (CheckBox) findViewById(R.id.cb_onlySound);
+                cb_onlySound.setOnCheckedChangeListener(cb_onlySoundOnCheckedChangeListener);
+            } else {
+                cb_onlySound = (CheckBox) findViewById(R.id.cb_onlySound);
+                cb_onlySound.setVisibility(View.GONE);
+            }
+
+            resetVideoView(true);
         }
+    }
+
+    void showServerListDialog(){
+
+        AlertDialog.Builder singleChoiceDialog =
+                new AlertDialog.Builder(MainActivity.this);
+        singleChoiceDialog.setTitle(R.string.action_select_server);
+        // 第二个参数是默认选项，此处设置为0
+        singleChoiceDialog.setSingleChoiceItems(servers, yourChoice,
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        newChoice = which;
+                    }
+                });
+        singleChoiceDialog.setPositiveButton(R.string.dialog_ok,
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        if (newChoice!=yourChoice) {
+                            yourChoice = newChoice;
+                            serversList.setSelectedServer(serversList.servers.get(yourChoice));
+                            resetVideoView(true);
+                        }
+                    }
+                });
+        singleChoiceDialog.setNegativeButton(R.string.dialog_cancle,null);
+
+        singleChoiceDialog.show();
+        /**
+        lv_servers = (ListView) findViewById(R.id.lv_servers);
+
+         * 线路选择事件
+        lv_servers.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Server si = (Server) view.getTag();
+
+                if (!si.title.equals(serversList.getSelectedServer().title)) {
+                    serversList.setSelectedServer(si);
+                    ((ServerListAdapter) lv_servers.getAdapter()).notifyDataSetChanged();
+                    resetVideoView(true);
+                }
+            }
+        });
+
+
+        //初始化左右抽屉菜单列表
+        lv_servers.setAdapter(new ServerListAdapter(MainActivity.this, serversList));
+
+        //setListViewHeightBasedOnChildren(lv_programsType);
+        setListViewHeightBasedOnChildren(lv_servers);
+
+         */
     }
 
     CompoundButton.OnCheckedChangeListener cb_onlySoundOnCheckedChangeListener = new CompoundButton.OnCheckedChangeListener() {
@@ -219,38 +305,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
     /**
-     * 横屏时布局设置
-     */
-    void screenLandscape(){
-
-        AppBarLayout toolbar_bar = (AppBarLayout) findViewById(R.id.toolbar_bar);
-        //横屏
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-        WindowManager.LayoutParams params = getWindow().getAttributes();
-        params.flags |= WindowManager.LayoutParams.FLAG_FULLSCREEN;
-        getWindow().setAttributes(params);
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-        toolbar_bar.setVisibility(View.INVISIBLE);
-
-        //获取屏幕宽高
-        DisplayMetrics dm = new DisplayMetrics();
-        getWindowManager().getDefaultDisplay().getMetrics(dm);
-        int width = dm.widthPixels;
-        int height = dm.heightPixels;
-
-        //横屏全屏
-        RelativeLayout contentPanel = (RelativeLayout)findViewById(R.id.contentPanel);
-        CoordinatorLayout.LayoutParams cl = new CoordinatorLayout.LayoutParams(width, height);
-        cl.setMargins(0,0,0,0);
-        contentPanel.setLayoutParams(cl);
-
-        RelativeLayout.LayoutParams l = new RelativeLayout.LayoutParams(width, height);
-        l.setMargins(0,0,0,0);
-        player_frame.setLayoutParams(l);
-        videoView.setLayoutParams(new FrameLayout.LayoutParams(width, height));
-    }
-
-    /**
      * 网络连接失败后关闭程序
      */
     void networkFailClose(){
@@ -269,87 +323,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 finish();
             }
         }).start();
-    }
-
-    /**
-     * 初始化数据
-     */
-    void initData() {
-        //初始化左右抽屉菜单列表
-        lv_servers.setAdapter(new ServerListAdapter(MainActivity.this, serversList));
-
-        //setListViewHeightBasedOnChildren(lv_programsType);
-        setListViewHeightBasedOnChildren(lv_servers);
-
-        /**
-         * 线路选择事件
-         */
-        lv_servers.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Server si = (Server) view.getTag();
-
-                if (!si.title.equals(serversList.getSelectedServer().title)) {
-                    serversList.setSelectedServer(si);
-                    ((ServerListAdapter) lv_servers.getAdapter()).notifyDataSetChanged();
-                    mDrawer_layout.closeDrawer(GravityCompat.END);
-                    resetVideoView(true);
-                }
-            }
-        });
-
-        resetVideoView(true);
-    }
-
-    /**
-     * 核心函数，用来初始化视频播放器。主要功能有
-     * 1、在全屏时进行特别设置
-     * 2、处理错误数据
-     * 3、处理点击
-     */
-    void initVideoView(){
-
-        //初始化三个关键变量
-        player_frame = (FrameLayout) findViewById(R.id.player_frame);
-        videoView = (VideoView) findViewById(R.id.videoView);
-        screenLandscape();
-
-        videoView.setVisibility(View.VISIBLE);
-        videoView.setBackgroundResource(R.drawable.zcgt);
-
-        videoView.setOnPreparedListener(videoViewOnPreparedListener);
-
-        videoView.setOnErrorListener(videoViewOnErrorListener);
-
-        //LinearLayout videoView_top = (LinearLayout)findViewById(R.id.videoView_top);
-        RelativeLayout videoView_bottom = (RelativeLayout)findViewById(R.id.videoView_bottom);
-
-        menuManager=new VideoMenuManager(MainActivity.this, videoView_bottom);//, videoView_top
-        videoView.setOnTouchListener(videoViewOnTouchListener);
-
-        //按放按扭
-        bt_play = (ImageButton) findViewById(R.id.bt_play);
-        bt_play.setOnClickListener(bt_playOnClickListener);
-
-        bt_select_server = (ImageButton) findViewById(R.id.bt_select_server);
-        bt_select_server.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mDrawer_layout.openDrawer(GravityCompat.END);
-            }
-        });
-
-
-        //仅声音按扭
-        if(channel.getChannelType() == ChannelType.淨空老法師直播) {
-            cb_onlySound = (CheckBox) findViewById(R.id.cb_onlySound);
-            cb_onlySound.setOnCheckedChangeListener(cb_onlySoundOnCheckedChangeListener);
-        } else {
-            cb_onlySound = (CheckBox) findViewById(R.id.cb_onlySound);
-            cb_onlySound.setVisibility(View.GONE);
-        }
-
-
     }
 
     MediaPlayer.OnPreparedListener videoViewOnPreparedListener=new MediaPlayer.OnPreparedListener() {
@@ -521,56 +494,6 @@ extra 	int: an extra code, specific to the error. Typically implementation depen
         String url = channel.tvUrl;
         Uri uri = Uri.parse(url.replace("server", serversList.getSelectedServer().domain));
         return uri;
-    }
-
-    @Override
-    public void onBackPressed() {
-        if (mDrawer_layout.isDrawerOpen(GravityCompat.START)) {
-            mDrawer_layout.closeDrawer(GravityCompat.START);
-        } else if (mDrawer_layout.isDrawerOpen(GravityCompat.END)) {
-            mDrawer_layout.closeDrawer(GravityCompat.END);
-        } else {
-            super.onBackPressed();
-        }
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_select_server) {
-            //显示右侧栏
-            if (mDrawer_layout.isDrawerOpen(GravityCompat.START)) {
-                mDrawer_layout.closeDrawer(GravityCompat.START);
-            }
-            mDrawer_layout.openDrawer(GravityCompat.END);
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-
-    @SuppressWarnings("StatementWithEmptyBody")
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
     }
 
     /**

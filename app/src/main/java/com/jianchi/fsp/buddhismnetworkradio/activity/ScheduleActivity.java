@@ -27,9 +27,11 @@ public class ScheduleActivity extends AppCompatActivity {
 
         toolbar.setTitle(TW2CN.getInstance(this).toLocalString(type+"節目時間"));
 
+        BApplication app = (BApplication) getApplication();
+
         WebView webView = (WebView) findViewById(R.id.webView);
         ChannelType channelType = Enum.valueOf(ChannelType.class, type);
-        webView.loadUrl(BApplication.programsListUrlMap.get(channelType));
+        webView.loadUrl(app.programsListUrlMap.get(channelType));
     }
 
 }
