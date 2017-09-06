@@ -20,7 +20,7 @@
     <string name="action_select_program_type">節目類型</string>
     <string name="lxwm">聯繫我們</string>
     <string name="spjzsb">視頻加載失敗。\r\n请检查网络重新加載。</string>
-    <string name="gfwz">凈空老法師官方網站</string>
+    <string name="gfwz">官方網站</string>
     <string name="pl">噗浪</string>
     <string name="xlwb">新浪微博</string>
     <string name="txwb">騰訊微博</string>
@@ -54,4 +54,14 @@
     <string name="local_mp3_explain">請點右上角「添加」下載MP3。系統會自動下載，最多下載5個，多餘的將被刪除。</string>
     <string name="dialog_ok">確定</string>
     <string name="dialog_cancle">關閉</string>
+    <string name="bt_invite_friends">向好友推薦</string>
+    <string name="bt_check_upgrade">檢測更新</string>
+    <string name="down_url">http://amtb.sfzd5.com/upgrade.json</string>
+    <string name="dzxx_url">amtb@amtb.tw</string>
+    <string name="pl_url">http://www.plurk.com/amtbtw</string>
+    <string name="site_url">http://www.amtb.tw/</string>
+    <string name="txwb_url">http://t.qq.com/amtbhz</string>
+    <string name="xlwb_url">http://weibo.com/amtbtw</string>
+    <string name="devxx_url">amtb@mail.sfzd5.com</string>
+    <string name="devxx">問題反饋電子信箱</string>
 </resources>

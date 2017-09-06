@@ -7,139 +7,152 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.jianchi.fsp.buddhismnetworkradio.activity.ContactActivity"
     tools:showIn="@layout/activity_contact">
-    <LinearLayout
-        android:orientation="vertical"
+
+    <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent" >
-
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="8dp">
+            android:layout_margin="8dp"
+            android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_marginBottom="8dp"
-                android:divider="@drawable/bottom_line"
+            <ImageView
+                android:id="@+id/imageView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_margin="24dp"
+                app:srcCompat="@mipmap/ic_launcher" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+            <com.beardedhen.androidbootstrap.BootstrapLabel
+                android:id="@+id/version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Head5"
+                app:bootstrapBrand="danger"
+                app:bootstrapHeading="h5"
+                app:roundedCorners="true" />
+
+            <com.beardedhen.androidbootstrap.BootstrapButtonGroup
+                android:id="@+id/bbutton_group_other"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="24dp"
+                android:orientation="vertical"
+                app:bootstrapBrand="primary"
+                app:bootstrapSize="lg"
+                app:roundedCorners="true">
+
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/bt_site"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="left"
                     android:text="@string/gfwz"
-                    android:textAppearance="@style/TextAppearance.AppCompat" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="http://www.amtb.tw/" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="http://www.amtb.cn/" />
-            </LinearLayout>
+                    app:badgeText="@string/site_url" />
 
-
-            <LinearLayout
-                android:layout_marginBottom="8dp"
-                android:divider="@drawable/bottom_line"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/bt_pl"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="left"
                     android:text="@string/pl"
-                    android:textAppearance="@style/TextAppearance.AppCompat" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="http://www.plurk.com/amtbtw" />
-            </LinearLayout>
+                    app:badgeText="@string/pl_url" />
 
-            <LinearLayout
-                android:layout_marginBottom="8dp"
-                android:divider="@drawable/bottom_line"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/bt_xlwb"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="left"
                     android:text="@string/xlwb"
-                    android:textAppearance="@style/TextAppearance.AppCompat" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="http://weibo.com/amtbtw" />
-            </LinearLayout>
+                    app:badgeText="@string/xlwb_url" />
 
-            <LinearLayout
-                android:layout_marginBottom="8dp"
-                android:divider="@drawable/bottom_line"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/bt_txwb"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="left"
                     android:text="@string/txwb"
-                    android:textAppearance="@style/TextAppearance.AppCompat" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="http://t.qq.com/amtbhz" />
-            </LinearLayout>
+                    app:badgeText="@string/txwb_url" />
 
-            <LinearLayout
-                android:layout_marginBottom="8dp"
-                android:divider="@drawable/bottom_line"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/bt_dzxx"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="left"
                     android:text="@string/czxx"
-                    android:textAppearance="@style/TextAppearance.AppCompat" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="amtb@amtb.tw" />
-            </LinearLayout>
+                    app:badgeText="@string/dzxx_url" />
 
-            <LinearLayout
-                android:layout_marginBottom="8dp"
-                android:divider="@drawable/bottom_line"
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/bt_devxx"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="left"
+                    android:text="@string/devxx"
+                    app:badgeText="@string/devxx_url" />
+
+            </com.beardedhen.androidbootstrap.BootstrapButtonGroup>
+
+            <com.beardedhen.androidbootstrap.BootstrapButtonGroup
+                android:id="@+id/bbutton_group"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="24dp"
+                android:orientation="vertical"
+                app:bootstrapBrand="primary"
+                app:bootstrapSize="lg"
+                app:roundedCorners="true">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/bt_invite_friends"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="left"
+                    android:text="@string/bt_invite_friends" />
+
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/bt_check_upgrade"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="left"
+                    android:text="@string/bt_check_upgrade" />
+
+            </com.beardedhen.androidbootstrap.BootstrapButtonGroup>
+
+            <com.beardedhen.androidbootstrap.BootstrapButtonGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="24dp"
+                android:orientation="vertical"
+                app:bootstrapBrand="primary"
+                app:bootstrapSize="lg"
+                app:roundedCorners="true">
+
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:gravity="left"
                     android:text="@string/wxh"
-                    android:textAppearance="@style/TextAppearance.AppCompat" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="amtbhz" />
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/weixin" />
-            </LinearLayout>
+                    app:badgeText="amtbhz" />
+            </com.beardedhen.androidbootstrap.BootstrapButtonGroup>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="48dp"
+                android:layout_gravity="center"
+                android:src="@drawable/weixin" />
+
         </LinearLayout>
 
-    </LinearLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>

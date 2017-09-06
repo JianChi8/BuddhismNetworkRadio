@@ -26,6 +26,7 @@ import com.jianchi.fsp.buddhismnetworkradio.api.IpInfo;
 import com.jianchi.fsp.buddhismnetworkradio.db.Mp3RecDBManager;
 import com.jianchi.fsp.buddhismnetworkradio.mp3.Mp3Program;
 import com.jianchi.fsp.buddhismnetworkradio.tools.MyLog;
+import com.lijunhuayc.upgrade.helper.UpgradeHelper;
 
 import java.io.IOException;
 import java.util.Collections;
@@ -119,17 +120,19 @@ public class StartActivity extends AppCompatActivity {
         //切换音频视频
         bt_tv = (BootstrapButton) findViewById(R.id.bt_tv);
         bt_mp3 = (BootstrapButton) findViewById(R.id.bt_mp3);
-        bt_tv.setOnClickListener(new View.OnClickListener() {
+        bt_tv.setOnCheckedChangedListener(new BootstrapButton.OnCheckedChangedListener() {
             @Override
-            public void onClick(View v) {
-                TvChannelListAdapter tvChannelListAdapter = new TvChannelListAdapter(StartActivity.this, channelList, app);
-                lv_channel.setAdapter(tvChannelListAdapter);
-                isTvChannel = true;
+            public void OnCheckedChanged(BootstrapButton bootstrapButton, boolean isChecked) {
+                if(isChecked){
+                    TvChannelListAdapter tvChannelListAdapter = new TvChannelListAdapter(StartActivity.this, channelList, app);
+                    lv_channel.setAdapter(tvChannelListAdapter);
+                    isTvChannel = true;
+                }
             }
         });
-        bt_mp3.setOnClickListener(new View.OnClickListener() {
+        bt_mp3.setOnCheckedChangedListener(new BootstrapButton.OnCheckedChangedListener() {
             @Override
-            public void onClick(View v) {
+            public void OnCheckedChanged(BootstrapButton bootstrapButton, boolean isChecked) {
                 Mp3ChannelListAdapter mp3ChannelListAdapter = new Mp3ChannelListAdapter(StartActivity.this, mp3Programs);
                 lv_channel.setAdapter(mp3ChannelListAdapter);
                 isTvChannel = false;
@@ -168,6 +171,11 @@ public class StartActivity extends AppCompatActivity {
             }
         }
 
+        UpgradeHelper upgradeHelper = new UpgradeHelper.Builder(this)
+                .setUpgradeUrl(getString(R.string.down_url))
+                .setIsAboutChecking(false)//关于页面手动检测更新需要设置isAboutChecking(true), 启动时检测设为false
+                .build();
+        upgradeHelper.check();
     }
 
 

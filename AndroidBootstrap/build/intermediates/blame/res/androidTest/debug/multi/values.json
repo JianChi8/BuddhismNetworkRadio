@@ -1,0 +1,1695 @@
+[
+    {
+        "outputFile": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/incremental/mergeDebugAndroidTestResources/merged.dir/values/values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 44,
+                    "endOffset": 95
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 44,
+                        "endOffset": 95
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 100,
+                    "endLine": 11,
+                    "endColumn": 11,
+                    "endOffset": 439
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 100,
+                        "endLine": 11,
+                        "endColumn": 11,
+                        "endOffset": 439
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 444,
+                    "endLine": 15,
+                    "endColumn": 11,
+                    "endOffset": 582
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 444,
+                        "endLine": 15,
+                        "endColumn": 11,
+                        "endOffset": 582
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 587,
+                    "endLine": 23,
+                    "endColumn": 11,
+                    "endOffset": 859
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 4,
+                        "startOffset": 587,
+                        "endLine": 23,
+                        "endColumn": 11,
+                        "endOffset": 859
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 864,
+                    "endLine": 30,
+                    "endColumn": 11,
+                    "endOffset": 1097
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 4,
+                        "startOffset": 864,
+                        "endLine": 30,
+                        "endColumn": 11,
+                        "endOffset": 1097
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 31,
+                    "startColumn": 4,
+                    "startOffset": 1102,
+                    "endLine": 36,
+                    "endColumn": 11,
+                    "endOffset": 1314
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 31,
+                        "startColumn": 4,
+                        "startOffset": 1102,
+                        "endLine": 36,
+                        "endColumn": 11,
+                        "endOffset": 1314
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 37,
+                    "startColumn": 4,
+                    "startOffset": 1319,
+                    "endColumn": 43,
+                    "endOffset": 1358
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 37,
+                        "startColumn": 4,
+                        "startOffset": 1319,
+                        "endColumn": 43,
+                        "endOffset": 1358
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 38,
+                    "startColumn": 4,
+                    "startOffset": 1363,
+                    "endColumn": 51,
+                    "endOffset": 1410
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 38,
+                        "startColumn": 4,
+                        "startOffset": 1363,
+                        "endColumn": 51,
+                        "endOffset": 1410
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 39,
+                    "startColumn": 4,
+                    "startOffset": 1415,
+                    "endColumn": 47,
+                    "endOffset": 1458
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 39,
+                        "startColumn": 4,
+                        "startOffset": 1415,
+                        "endColumn": 47,
+                        "endOffset": 1458
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 40,
+                    "startColumn": 4,
+                    "startOffset": 1463,
+                    "endColumn": 54,
+                    "endOffset": 1513
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 40,
+                        "startColumn": 4,
+                        "startOffset": 1463,
+                        "endColumn": 54,
+                        "endOffset": 1513
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 41,
+                    "startColumn": 4,
+                    "startOffset": 1518,
+                    "endLine": 735,
+                    "endColumn": 11,
+                    "endOffset": 34665
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 41,
+                        "startColumn": 4,
+                        "startOffset": 1518,
+                        "endLine": 735,
+                        "endColumn": 11,
+                        "endOffset": 34665
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 736,
+                    "startColumn": 4,
+                    "startOffset": 34670,
+                    "endColumn": 45,
+                    "endOffset": 34711
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 736,
+                        "startColumn": 4,
+                        "startOffset": 34670,
+                        "endColumn": 45,
+                        "endOffset": 34711
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 737,
+                    "startColumn": 4,
+                    "startOffset": 34716,
+                    "endColumn": 48,
+                    "endOffset": 34760
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 737,
+                        "startColumn": 4,
+                        "startOffset": 34716,
+                        "endColumn": 48,
+                        "endOffset": 34760
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 738,
+                    "startColumn": 4,
+                    "startOffset": 34765,
+                    "endLine": 1671,
+                    "endColumn": 11,
+                    "endOffset": 81752
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 738,
+                        "startColumn": 4,
+                        "startOffset": 34765,
+                        "endLine": 1671,
+                        "endColumn": 11,
+                        "endOffset": 81752
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1672,
+                    "startColumn": 4,
+                    "startOffset": 81757,
+                    "endColumn": 46,
+                    "endOffset": 81799
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 1672,
+                        "startColumn": 4,
+                        "startOffset": 81757,
+                        "endColumn": 46,
+                        "endOffset": 81799
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1673,
+                    "startColumn": 4,
+                    "startOffset": 81804,
+                    "endColumn": 50,
+                    "endOffset": 81850
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 1673,
+                        "startColumn": 4,
+                        "startOffset": 81804,
+                        "endColumn": 50,
+                        "endOffset": 81850
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1674,
+                    "startColumn": 4,
+                    "startOffset": 81855,
+                    "endColumn": 47,
+                    "endOffset": 81898
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 1674,
+                        "startColumn": 4,
+                        "startOffset": 81855,
+                        "endColumn": 47,
+                        "endOffset": 81898
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1675,
+                    "startColumn": 4,
+                    "startOffset": 81903,
+                    "endColumn": 45,
+                    "endOffset": 81944
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 1675,
+                        "startColumn": 4,
+                        "startOffset": 81903,
+                        "endColumn": 45,
+                        "endOffset": 81944
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 1676,
+                    "startColumn": 4,
+                    "startOffset": 81949,
+                    "endLine": 2013,
+                    "endColumn": 11,
+                    "endOffset": 98991
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 1676,
+                        "startColumn": 4,
+                        "startOffset": 81949,
+                        "endLine": 2013,
+                        "endColumn": 11,
+                        "endOffset": 98991
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2014,
+                    "startColumn": 4,
+                    "startOffset": 98996,
+                    "endColumn": 65,
+                    "endOffset": 99057
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2014,
+                        "startColumn": 4,
+                        "startOffset": 98996,
+                        "endColumn": 65,
+                        "endOffset": 99057
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2015,
+                    "startColumn": 4,
+                    "startOffset": 99062,
+                    "endColumn": 56,
+                    "endOffset": 99114
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2015,
+                        "startColumn": 4,
+                        "startOffset": 99062,
+                        "endColumn": 56,
+                        "endOffset": 99114
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2016,
+                    "startColumn": 4,
+                    "startOffset": 99119,
+                    "endColumn": 54,
+                    "endOffset": 99169
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2016,
+                        "startColumn": 4,
+                        "startOffset": 99119,
+                        "endColumn": 54,
+                        "endOffset": 99169
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2017,
+                    "startColumn": 4,
+                    "startOffset": 99174,
+                    "endColumn": 57,
+                    "endOffset": 99227
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2017,
+                        "startColumn": 4,
+                        "startOffset": 99174,
+                        "endColumn": 57,
+                        "endOffset": 99227
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2018,
+                    "startColumn": 4,
+                    "startOffset": 99232,
+                    "endColumn": 66,
+                    "endOffset": 99294
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2018,
+                        "startColumn": 4,
+                        "startOffset": 99232,
+                        "endColumn": 66,
+                        "endOffset": 99294
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2019,
+                    "startColumn": 4,
+                    "startOffset": 99299,
+                    "endColumn": 64,
+                    "endOffset": 99359
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2019,
+                        "startColumn": 4,
+                        "startOffset": 99299,
+                        "endColumn": 64,
+                        "endOffset": 99359
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2020,
+                    "startColumn": 4,
+                    "startOffset": 99364,
+                    "endColumn": 64,
+                    "endOffset": 99424
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2020,
+                        "startColumn": 4,
+                        "startOffset": 99364,
+                        "endColumn": 64,
+                        "endOffset": 99424
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2021,
+                    "startColumn": 4,
+                    "startOffset": 99429,
+                    "endColumn": 57,
+                    "endOffset": 99482
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2021,
+                        "startColumn": 4,
+                        "startOffset": 99429,
+                        "endColumn": 57,
+                        "endOffset": 99482
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2022,
+                    "startColumn": 4,
+                    "startOffset": 99487,
+                    "endColumn": 57,
+                    "endOffset": 99540
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2022,
+                        "startColumn": 4,
+                        "startOffset": 99487,
+                        "endColumn": 57,
+                        "endOffset": 99540
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2023,
+                    "startColumn": 4,
+                    "startOffset": 99545,
+                    "endColumn": 60,
+                    "endOffset": 99601
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2023,
+                        "startColumn": 4,
+                        "startOffset": 99545,
+                        "endColumn": 60,
+                        "endOffset": 99601
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2024,
+                    "startColumn": 4,
+                    "startOffset": 99606,
+                    "endColumn": 63,
+                    "endOffset": 99665
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2024,
+                        "startColumn": 4,
+                        "startOffset": 99606,
+                        "endColumn": 63,
+                        "endOffset": 99665
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2025,
+                    "startColumn": 4,
+                    "startOffset": 99670,
+                    "endColumn": 48,
+                    "endOffset": 99714
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2025,
+                        "startColumn": 4,
+                        "startOffset": 99670,
+                        "endColumn": 48,
+                        "endOffset": 99714
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2026,
+                    "startColumn": 4,
+                    "startOffset": 99719,
+                    "endColumn": 53,
+                    "endOffset": 99768
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2026,
+                        "startColumn": 4,
+                        "startOffset": 99719,
+                        "endColumn": 53,
+                        "endOffset": 99768
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2027,
+                    "startColumn": 4,
+                    "startOffset": 99773,
+                    "endColumn": 54,
+                    "endOffset": 99823
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2027,
+                        "startColumn": 4,
+                        "startOffset": 99773,
+                        "endColumn": 54,
+                        "endOffset": 99823
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2028,
+                    "startColumn": 4,
+                    "startOffset": 99828,
+                    "endColumn": 56,
+                    "endOffset": 99880
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2028,
+                        "startColumn": 4,
+                        "startOffset": 99828,
+                        "endColumn": 56,
+                        "endOffset": 99880
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2029,
+                    "startColumn": 4,
+                    "startOffset": 99885,
+                    "endColumn": 57,
+                    "endOffset": 99938
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2029,
+                        "startColumn": 4,
+                        "startOffset": 99885,
+                        "endColumn": 57,
+                        "endOffset": 99938
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2030,
+                    "startColumn": 4,
+                    "startOffset": 99943,
+                    "endColumn": 66,
+                    "endOffset": 100005
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2030,
+                        "startColumn": 4,
+                        "startOffset": 99943,
+                        "endColumn": 66,
+                        "endOffset": 100005
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2031,
+                    "startColumn": 4,
+                    "startOffset": 100010,
+                    "endColumn": 59,
+                    "endOffset": 100065
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2031,
+                        "startColumn": 4,
+                        "startOffset": 100010,
+                        "endColumn": 59,
+                        "endOffset": 100065
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2032,
+                    "startColumn": 4,
+                    "startOffset": 100070,
+                    "endColumn": 61,
+                    "endOffset": 100127
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2032,
+                        "startColumn": 4,
+                        "startOffset": 100070,
+                        "endColumn": 61,
+                        "endOffset": 100127
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2046,
+                    "startColumn": 4,
+                    "startOffset": 102739,
+                    "endColumn": 64,
+                    "endOffset": 102799
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2046,
+                        "startColumn": 4,
+                        "startOffset": 102739,
+                        "endColumn": 64,
+                        "endOffset": 102799
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2047,
+                    "startColumn": 4,
+                    "startOffset": 102804,
+                    "endColumn": 54,
+                    "endOffset": 102854
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2047,
+                        "startColumn": 4,
+                        "startOffset": 102804,
+                        "endColumn": 54,
+                        "endOffset": 102854
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2048,
+                    "startColumn": 4,
+                    "startOffset": 102859,
+                    "endColumn": 58,
+                    "endOffset": 102913
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2048,
+                        "startColumn": 4,
+                        "startOffset": 102859,
+                        "endColumn": 58,
+                        "endOffset": 102913
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2049,
+                    "startColumn": 4,
+                    "startOffset": 102918,
+                    "endColumn": 59,
+                    "endOffset": 102973
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2049,
+                        "startColumn": 4,
+                        "startOffset": 102918,
+                        "endColumn": 59,
+                        "endOffset": 102973
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2050,
+                    "startColumn": 4,
+                    "startOffset": 102978,
+                    "endColumn": 68,
+                    "endOffset": 103042
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2050,
+                        "startColumn": 4,
+                        "startOffset": 102978,
+                        "endColumn": 68,
+                        "endOffset": 103042
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2051,
+                    "startColumn": 4,
+                    "startOffset": 103047,
+                    "endColumn": 65,
+                    "endOffset": 103108
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2051,
+                        "startColumn": 4,
+                        "startOffset": 103047,
+                        "endColumn": 65,
+                        "endOffset": 103108
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2052,
+                    "startColumn": 4,
+                    "startOffset": 103113,
+                    "endColumn": 65,
+                    "endOffset": 103174
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2052,
+                        "startColumn": 4,
+                        "startOffset": 103113,
+                        "endColumn": 65,
+                        "endOffset": 103174
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2053,
+                    "startColumn": 4,
+                    "startOffset": 103179,
+                    "endColumn": 68,
+                    "endOffset": 103243
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2053,
+                        "startColumn": 4,
+                        "startOffset": 103179,
+                        "endColumn": 68,
+                        "endOffset": 103243
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2054,
+                    "startColumn": 4,
+                    "startOffset": 103248,
+                    "endColumn": 70,
+                    "endOffset": 103314
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2054,
+                        "startColumn": 4,
+                        "startOffset": 103248,
+                        "endColumn": 70,
+                        "endOffset": 103314
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2055,
+                    "startColumn": 4,
+                    "startOffset": 103319,
+                    "endColumn": 61,
+                    "endOffset": 103376
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2055,
+                        "startColumn": 4,
+                        "startOffset": 103319,
+                        "endColumn": 61,
+                        "endOffset": 103376
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2056,
+                    "startColumn": 4,
+                    "startOffset": 103381,
+                    "endColumn": 70,
+                    "endOffset": 103447
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2056,
+                        "startColumn": 4,
+                        "startOffset": 103381,
+                        "endColumn": 70,
+                        "endOffset": 103447
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2057,
+                    "startColumn": 4,
+                    "startOffset": 103452,
+                    "endColumn": 67,
+                    "endOffset": 103515
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2057,
+                        "startColumn": 4,
+                        "startOffset": 103452,
+                        "endColumn": 67,
+                        "endOffset": 103515
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2058,
+                    "startColumn": 4,
+                    "startOffset": 103520,
+                    "endColumn": 67,
+                    "endOffset": 103583
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2058,
+                        "startColumn": 4,
+                        "startOffset": 103520,
+                        "endColumn": 67,
+                        "endOffset": 103583
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2059,
+                    "startColumn": 4,
+                    "startOffset": 103588,
+                    "endColumn": 69,
+                    "endOffset": 103653
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2059,
+                        "startColumn": 4,
+                        "startOffset": 103588,
+                        "endColumn": 69,
+                        "endOffset": 103653
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2060,
+                    "startColumn": 4,
+                    "startOffset": 103658,
+                    "endColumn": 72,
+                    "endOffset": 103726
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2060,
+                        "startColumn": 4,
+                        "startOffset": 103658,
+                        "endColumn": 72,
+                        "endOffset": 103726
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2061,
+                    "startColumn": 4,
+                    "startOffset": 103731,
+                    "endColumn": 69,
+                    "endOffset": 103796
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2061,
+                        "startColumn": 4,
+                        "startOffset": 103731,
+                        "endColumn": 69,
+                        "endOffset": 103796
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2062,
+                    "startColumn": 4,
+                    "startOffset": 103801,
+                    "endColumn": 74,
+                    "endOffset": 103871
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2062,
+                        "startColumn": 4,
+                        "startOffset": 103801,
+                        "endColumn": 74,
+                        "endOffset": 103871
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2063,
+                    "startColumn": 4,
+                    "startOffset": 103876,
+                    "endColumn": 75,
+                    "endOffset": 103947
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2063,
+                        "startColumn": 4,
+                        "startOffset": 103876,
+                        "endColumn": 75,
+                        "endOffset": 103947
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2064,
+                    "startColumn": 4,
+                    "startOffset": 103952,
+                    "endColumn": 69,
+                    "endOffset": 104017
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2064,
+                        "startColumn": 4,
+                        "startOffset": 103952,
+                        "endColumn": 69,
+                        "endOffset": 104017
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2065,
+                    "startColumn": 4,
+                    "startOffset": 104022,
+                    "endColumn": 63,
+                    "endOffset": 104081
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2065,
+                        "startColumn": 4,
+                        "startOffset": 104022,
+                        "endColumn": 63,
+                        "endOffset": 104081
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2066,
+                    "startColumn": 4,
+                    "startOffset": 104086,
+                    "endColumn": 68,
+                    "endOffset": 104150
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2066,
+                        "startColumn": 4,
+                        "startOffset": 104086,
+                        "endColumn": 68,
+                        "endOffset": 104150
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2067,
+                    "startColumn": 4,
+                    "startOffset": 104155,
+                    "endColumn": 62,
+                    "endOffset": 104213
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2067,
+                        "startColumn": 4,
+                        "startOffset": 104155,
+                        "endColumn": 62,
+                        "endOffset": 104213
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2068,
+                    "startColumn": 4,
+                    "startOffset": 104218,
+                    "endColumn": 65,
+                    "endOffset": 104279
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2068,
+                        "startColumn": 4,
+                        "startOffset": 104218,
+                        "endColumn": 65,
+                        "endOffset": 104279
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2069,
+                    "startColumn": 4,
+                    "startOffset": 104284,
+                    "endColumn": 62,
+                    "endOffset": 104342
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2069,
+                        "startColumn": 4,
+                        "startOffset": 104284,
+                        "endColumn": 62,
+                        "endOffset": 104342
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2070,
+                    "startColumn": 4,
+                    "startOffset": 104347,
+                    "endColumn": 58,
+                    "endOffset": 104401
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2070,
+                        "startColumn": 4,
+                        "startOffset": 104347,
+                        "endColumn": 58,
+                        "endOffset": 104401
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2071,
+                    "startColumn": 4,
+                    "startOffset": 104406,
+                    "endColumn": 55,
+                    "endOffset": 104457
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2071,
+                        "startColumn": 4,
+                        "startOffset": 104406,
+                        "endColumn": 55,
+                        "endOffset": 104457
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2072,
+                    "startColumn": 4,
+                    "startOffset": 104462,
+                    "endColumn": 59,
+                    "endOffset": 104517
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2072,
+                        "startColumn": 4,
+                        "startOffset": 104462,
+                        "endColumn": 59,
+                        "endOffset": 104517
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2073,
+                    "startColumn": 4,
+                    "startOffset": 104522,
+                    "endColumn": 58,
+                    "endOffset": 104576
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2073,
+                        "startColumn": 4,
+                        "startOffset": 104522,
+                        "endColumn": 58,
+                        "endOffset": 104576
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2074,
+                    "startColumn": 4,
+                    "startOffset": 104581,
+                    "endColumn": 53,
+                    "endOffset": 104630
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2074,
+                        "startColumn": 4,
+                        "startOffset": 104581,
+                        "endColumn": 53,
+                        "endOffset": 104630
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2075,
+                    "startColumn": 4,
+                    "startOffset": 104635,
+                    "endColumn": 55,
+                    "endOffset": 104686
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2075,
+                        "startColumn": 4,
+                        "startOffset": 104635,
+                        "endColumn": 55,
+                        "endOffset": 104686
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2076,
+                    "startColumn": 4,
+                    "startOffset": 104691,
+                    "endColumn": 57,
+                    "endOffset": 104744
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2076,
+                        "startColumn": 4,
+                        "startOffset": 104691,
+                        "endColumn": 57,
+                        "endOffset": 104744
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2077,
+                    "startColumn": 4,
+                    "startOffset": 104749,
+                    "endColumn": 55,
+                    "endOffset": 104800
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2077,
+                        "startColumn": 4,
+                        "startOffset": 104749,
+                        "endColumn": 55,
+                        "endOffset": 104800
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2078,
+                    "startColumn": 4,
+                    "startOffset": 104805,
+                    "endColumn": 59,
+                    "endOffset": 104860
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2078,
+                        "startColumn": 4,
+                        "startOffset": 104805,
+                        "endColumn": 59,
+                        "endOffset": 104860
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2079,
+                    "startColumn": 4,
+                    "startOffset": 104865,
+                    "endColumn": 57,
+                    "endOffset": 104918
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2079,
+                        "startColumn": 4,
+                        "startOffset": 104865,
+                        "endColumn": 57,
+                        "endOffset": 104918
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2080,
+                    "startColumn": 4,
+                    "startOffset": 104923,
+                    "endColumn": 53,
+                    "endOffset": 104972
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2080,
+                        "startColumn": 4,
+                        "startOffset": 104923,
+                        "endColumn": 53,
+                        "endOffset": 104972
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2081,
+                    "startColumn": 4,
+                    "startOffset": 104977,
+                    "endColumn": 58,
+                    "endOffset": 105031
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2081,
+                        "startColumn": 4,
+                        "startOffset": 104977,
+                        "endColumn": 58,
+                        "endOffset": 105031
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2082,
+                    "startColumn": 4,
+                    "startOffset": 105036,
+                    "endColumn": 55,
+                    "endOffset": 105087
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2082,
+                        "startColumn": 4,
+                        "startOffset": 105036,
+                        "endColumn": 55,
+                        "endOffset": 105087
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2083,
+                    "startColumn": 4,
+                    "startOffset": 105092,
+                    "endColumn": 55,
+                    "endOffset": 105143
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2083,
+                        "startColumn": 4,
+                        "startOffset": 105092,
+                        "endColumn": 55,
+                        "endOffset": 105143
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2084,
+                    "startColumn": 4,
+                    "startOffset": 105148,
+                    "endColumn": 59,
+                    "endOffset": 105203
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2084,
+                        "startColumn": 4,
+                        "startOffset": 105148,
+                        "endColumn": 59,
+                        "endOffset": 105203
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2085,
+                    "startColumn": 4,
+                    "startOffset": 105208,
+                    "endColumn": 57,
+                    "endOffset": 105261
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2085,
+                        "startColumn": 4,
+                        "startOffset": 105208,
+                        "endColumn": 57,
+                        "endOffset": 105261
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2086,
+                    "startColumn": 4,
+                    "startOffset": 105266,
+                    "endColumn": 53,
+                    "endOffset": 105315
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2086,
+                        "startColumn": 4,
+                        "startOffset": 105266,
+                        "endColumn": 53,
+                        "endOffset": 105315
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2087,
+                    "startColumn": 4,
+                    "startOffset": 105320,
+                    "endColumn": 57,
+                    "endOffset": 105373
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2087,
+                        "startColumn": 4,
+                        "startOffset": 105320,
+                        "endColumn": 57,
+                        "endOffset": 105373
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2088,
+                    "startColumn": 4,
+                    "startOffset": 105378,
+                    "endColumn": 71,
+                    "endOffset": 105445
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2088,
+                        "startColumn": 4,
+                        "startOffset": 105378,
+                        "endColumn": 71,
+                        "endOffset": 105445
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2089,
+                    "startColumn": 4,
+                    "startOffset": 105450,
+                    "endColumn": 60,
+                    "endOffset": 105506
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2089,
+                        "startColumn": 4,
+                        "startOffset": 105450,
+                        "endColumn": 60,
+                        "endOffset": 105506
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2090,
+                    "startColumn": 4,
+                    "startOffset": 105511,
+                    "endColumn": 58,
+                    "endOffset": 105565
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2090,
+                        "startColumn": 4,
+                        "startOffset": 105511,
+                        "endColumn": 58,
+                        "endOffset": 105565
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2091,
+                    "startColumn": 4,
+                    "startOffset": 105570,
+                    "endColumn": 60,
+                    "endOffset": 105626
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2091,
+                        "startColumn": 4,
+                        "startOffset": 105570,
+                        "endColumn": 60,
+                        "endOffset": 105626
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2092,
+                    "startColumn": 4,
+                    "startOffset": 105631,
+                    "endColumn": 57,
+                    "endOffset": 105684
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2092,
+                        "startColumn": 4,
+                        "startOffset": 105631,
+                        "endColumn": 57,
+                        "endOffset": 105684
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2093,
+                    "startColumn": 4,
+                    "startOffset": 105689,
+                    "endColumn": 55,
+                    "endOffset": 105740
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2093,
+                        "startColumn": 4,
+                        "startOffset": 105689,
+                        "endColumn": 55,
+                        "endOffset": 105740
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2094,
+                    "startColumn": 4,
+                    "startOffset": 105745,
+                    "endColumn": 53,
+                    "endOffset": 105794
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2094,
+                        "startColumn": 4,
+                        "startOffset": 105745,
+                        "endColumn": 53,
+                        "endOffset": 105794
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 2095,
+                    "startColumn": 4,
+                    "startOffset": 105799,
+                    "endColumn": 55,
+                    "endOffset": 105850
+                },
+                "from": {
+                    "file": "/home/fsp/AndroidStudioProjects/BuddhismNetworkRadio/AndroidBootstrap/build/intermediates/bundles/debug/res/values/values.xml",
+                    "position": {
+                        "startLine": 2095,
+                        "startColumn": 4,
+                        "startOffset": 105799,
+                        "endColumn": 55,
+                        "endOffset": 105850
+                    }
+                }
+            }
+        ]
+    }
+]
