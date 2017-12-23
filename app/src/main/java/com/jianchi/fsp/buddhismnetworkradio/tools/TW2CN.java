@@ -16,26 +16,31 @@ import java.util.Map;
  * Created by fsp on 16-7-25.
  */
 public class TW2CN {
-    static private Map<Character, Character> ts ;
+    private Map<Character, Character> ts ;
+    private Map<Character, Character> st ;
     static private TW2CN instance;
-    static private boolean isCN;
+    private boolean isTW;
     private TW2CN(){
         Locale locale = Locale.getDefault();
-        isCN = locale.getCountry().equals("CN");
+        String country = locale.getLanguage().toUpperCase();
+        isTW = !country.equals("ZH");
     }
 
-    public String toLocalString(String str){
-        if(isCN)
-            return t2s(str);
+    public String toLocale(String str){
+        if(isTW)
+            return s2t(str);
         else
-            return str;
+            return t2s(str);
     }
+
+    public boolean getIsTW(){return isTW;}
 
     public static TW2CN getInstance(Context context) {
         if (instance == null) {
             try {
                 instance = new TW2CN();
-                ts = new HashMap<Character, Character>();
+                instance.ts = new HashMap<Character, Character>();
+                instance.st = new HashMap<Character, Character>();
                 Resources resources=context.getResources();
                 InputStream is=resources.openRawResource(R.raw.ts);
                 StringBuffer sBuffer = new StringBuffer();
@@ -51,7 +56,8 @@ public class TW2CN {
                         continue;
                     }
                     if (chararry[0] != chararry[1]) {
-                        ts.put(chararry[0], chararry[1]);
+                        instance.ts.put(chararry[0], chararry[1]);
+                        instance.st.put(chararry[1], chararry[0]);
                     }
                 }
                 buffreader.close();
@@ -64,11 +70,32 @@ public class TW2CN {
         return instance;
     }
 
+    /*
+    繁体字转简体字
+     */
     public String t2s(String str) {
         char[] result = new char[str.length()];
         for (int i = 0; i < str.length(); i++) {
             char tchar = str.charAt(i);
             Character schar = ts.get(tchar);
+            if (schar != null) {
+                result[i] = schar;
+            } else {
+                result[i] = tchar;
+            }
+        }
+        return new String(result);
+    }
+
+
+    /*
+    简体字转繁体字
+     */
+    public String s2t(String str) {
+        char[] result = new char[str.length()];
+        for (int i = 0; i < str.length(); i++) {
+            char tchar = str.charAt(i);
+            Character schar = st.get(tchar);
             if (schar != null) {
                 result[i] = schar;
             } else {

@@ -48,7 +48,7 @@ class CheckAsyncTask extends AsyncTask<String, Integer, UpgradeInfoResult> {
                 executeResult(upgradeInfoResult.getData());
             } else if (config.isAboutChecking()) {
                 //if is "about" check upgrade, prompt than it's the latest version.
-                MyToast.showToast(tw2CN.toLocalString("已是最新版本"));
+                MyToast.showToast(tw2CN.toLocal("已是最新版本"));
             }
         }
     }
@@ -58,7 +58,7 @@ class CheckAsyncTask extends AsyncTask<String, Integer, UpgradeInfoResult> {
         if (config.isCheckPackageName()
                 && !upgradeInfoModel.getPackageName().equals(localAppInfo.getPackageName())) {
             //enable set callback notify coder and coder can dispose callback notify server or not.
-            MyToast.showToast(tw2CN.toLocalString("软件包不相同"));
+            MyToast.showToast(tw2CN.toLocal("软件包不相同"));
             return;
         }
         if (upgradeInfoModel.getVersionCode() > localAppInfo.getVersionCode() && upgradeInfoModel.getVersionCode() != localAppInfo.getIgnoreVersionCode()) {
@@ -66,7 +66,7 @@ class CheckAsyncTask extends AsyncTask<String, Integer, UpgradeInfoResult> {
             new EasyDialog(upgradeInfoModel, config, mContext).show();
         } else if (config.isAboutChecking()) {
             //if is "about" check upgrade, prompt than it's the latest version.
-            MyToast.showToast(tw2CN.toLocalString("已是最新版本"));
+            MyToast.showToast(tw2CN.toLocal("已是最新版本"));
         }
     }
 

@@ -11,7 +11,6 @@ import com.beardedhen.androidbootstrap.AwesomeTextView;
 import com.beardedhen.androidbootstrap.BootstrapBadge;
 import com.jianchi.fsp.buddhismnetworkradio.R;
 import com.jianchi.fsp.buddhismnetworkradio.mp3.Mp3File;
-import com.jianchi.fsp.buddhismnetworkradio.mp3.Mp3Program;
 import com.jianchi.fsp.buddhismnetworkradio.tools.TW2CN;
 
 import java.util.List;
@@ -77,7 +76,7 @@ public class Mp3LocalListAdapter extends BaseAdapter {
             icon_play.setFontAwesomeIcon("fa-save");
             if(process>0 && mp3File.fileName.equals(processFileName)){
                 process_badge.setVisibility(View.VISIBLE);
-                process_badge.setBadgeText(TW2CN.getInstance(context).toLocalString("下載進度")+process);
+                process_badge.setBadgeText(TW2CN.getInstance(context).toLocal("下載進度")+process);
             }
             convertView.setBackgroundResource(R.color.bootstrap_gray_lightest);
         } else if(mp3File.state == Mp3File.LocaleMp3State.NoDownload){
@@ -92,7 +91,7 @@ public class Mp3LocalListAdapter extends BaseAdapter {
         }
 
         TextView txt = (TextView) convertView.findViewById(R.id.txt);
-        txt.setText(TW2CN.getInstance(context).toLocalString(mp3File.fileName));
+        txt.setText(TW2CN.getInstance(context).toLocal(mp3File.fileName));
 
         return convertView;
     }

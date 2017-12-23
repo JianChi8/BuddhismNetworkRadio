@@ -38,26 +38,26 @@ public class EasyDialog {
         tv_fileSize = (TextView) dialogView.findViewById(R.id.tv_fileSize);
         tv_upgradeNotes = (TextView) dialogView.findViewById(R.id.tv_upgradeNotes);
         cb_ignoreThisVersion = (CheckBox) dialogView.findViewById(R.id.cb_ignoreThisVersion);
-        tv_versionName.setText(tw2CN.toLocalString("最新版本:"+upgradeInfoModel.getVersionName()));
+        tv_versionName.setText(tw2CN.toLocal("最新版本:"+upgradeInfoModel.getVersionName()));
         String fileSize = String.format("%.2f", upgradeInfoModel.getFileSize()/1024/1024.0);
-        tv_versionName.setText(tw2CN.toLocalString("文件大小:"+fileSize));
-        tv_upgradeNotes.setText(tw2CN.toLocalString("最新版本:"+upgradeInfoModel.getUpgradeNotes()));
+        tv_versionName.setText(tw2CN.toLocal("文件大小:"+fileSize));
+        tv_upgradeNotes.setText(tw2CN.toLocal("最新版本:"+upgradeInfoModel.getUpgradeNotes()));
     }
 
     public void show() {
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(mContext)
-                .setTitle(tw2CN.toLocalString("有新版本"))
+                .setTitle(tw2CN.toLocal("有新版本"))
                 .setView(dialogView)
                 .setMessage(upgradeInfoModel.getUpgradeNotes())
                 .setCancelable(false);
 
-        alertDialog.setPositiveButton(tw2CN.toLocalString("立即更新"), new DialogInterface.OnClickListener() {
+        alertDialog.setPositiveButton(tw2CN.toLocal("立即更新"), new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 startDownload(upgradeInfoModel);
                 dialog.dismiss();
             }
-        }).setNegativeButton(tw2CN.toLocalString("稍后再说"), null);
+        }).setNegativeButton(tw2CN.toLocal("稍后再说"), null);
 
         dialog = alertDialog.show();
 

@@ -7,7 +7,6 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.beardedhen.androidbootstrap.AwesomeTextView;
 import com.jianchi.fsp.buddhismnetworkradio.R;
 import com.jianchi.fsp.buddhismnetworkradio.tools.TW2CN;
 
@@ -56,7 +55,7 @@ public class NewsListAdapter extends BaseAdapter {
         convertView.setTag(holder);
 
         TextView txt = (TextView) convertView.findViewById(R.id.txt);
-        txt.setText(TW2CN.getInstance(context).toLocalString(holder));
+        txt.setText(TW2CN.getInstance(context).toLocal(holder));
 
         return convertView;
     }

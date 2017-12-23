@@ -139,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
         Server selectedServer = serversList.getSelectedServer();
         for(int i=0; i<serversList.servers.size(); i++) {
             Server s = serversList.servers.get(i);
-            servers[i] = TW2CN.getInstance(this).toLocalString(s.title);
+            servers[i] = TW2CN.getInstance(this).toLocal(s.title);
             if(s==selectedServer)
                 yourChoice = i;
         }

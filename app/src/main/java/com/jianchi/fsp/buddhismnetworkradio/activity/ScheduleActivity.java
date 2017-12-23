@@ -1,11 +1,9 @@
 package com.jianchi.fsp.buddhismnetworkradio.activity;
 
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.WindowManager;
 import android.webkit.WebView;
 
 import com.jianchi.fsp.buddhismnetworkradio.BApplication;
@@ -25,7 +23,7 @@ public class ScheduleActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String type = intent.getStringExtra("type");
 
-        toolbar.setTitle(TW2CN.getInstance(this).toLocalString(type+"節目時間"));
+        toolbar.setTitle(TW2CN.getInstance(this).toLocal(type+"節目時間"));
 
         BApplication app = (BApplication) getApplication();
 

@@ -76,7 +76,7 @@ public class Mp3ManagerAdapter extends BaseExpandableListAdapter {
             convertView = mInflater.inflate(R.layout.group_channel, null);
         }
         TextView txt = (TextView) convertView.findViewById(R.id.txt);
-        txt.setText(TW2CN.getInstance(context).toLocalString(mp3Channels.get(groupPosition).category));
+        txt.setText(TW2CN.getInstance(context).toLocal(mp3Channels.get(groupPosition).category));
         return convertView;
     }
 
@@ -89,10 +89,10 @@ public class Mp3ManagerAdapter extends BaseExpandableListAdapter {
         convertView.setTag(holder);
 
         TextView txt = (TextView) convertView.findViewById(R.id.txt);
-        txt.setText(TW2CN.getInstance(context).toLocalString(holder.name));
+        txt.setText(TW2CN.getInstance(context).toLocal(holder.name));
 
         TextView info = (TextView) convertView.findViewById(R.id.info);
-        info.setText(TW2CN.getInstance(context).toLocalString(holder.info));
+        info.setText(TW2CN.getInstance(context).toLocal(holder.info));
 
         CheckBox checkBox = (CheckBox) convertView.findViewById(R.id.checkBox);
 

@@ -66,7 +66,7 @@ public class Mp3ListAdapter extends BaseAdapter {
         }
 
         TextView txt = (TextView) convertView.findViewById(R.id.txt);
-        txt.setText(TW2CN.getInstance(context).toLocalString(holder));
+        txt.setText(TW2CN.getInstance(context).toLocal(holder));
 
         return convertView;
     }

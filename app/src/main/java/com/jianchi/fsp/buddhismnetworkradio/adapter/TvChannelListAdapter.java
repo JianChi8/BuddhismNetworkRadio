@@ -60,7 +60,7 @@ public class TvChannelListAdapter extends BaseAdapter {
 
         convertView.setTag(holder);
         TextView txt = (TextView) convertView.findViewById(R.id.txt);
-        txt.setText(TW2CN.getInstance(context).toLocalString(holder.title));
+        txt.setText(TW2CN.getInstance(context).toLocal(holder.title));
         AwesomeTextView bt_showSchedule = (AwesomeTextView) convertView.findViewById(R.id.bt_showSchedule);
         ChannelType channelType = holder.getChannelType();
         if(app.programsListUrlMap.containsKey(channelType)) {

@@ -181,7 +181,7 @@ public class Mp3LocalPlayerActivity extends AppCompatActivity {
         lv.setAdapter(mp3ListAdapter);
 
 
-        setTitle(TW2CN.getInstance(this).toLocalString(mp3Program.name));
+        setTitle(TW2CN.getInstance(this).toLocal(mp3Program.name));
 
         preMp3PlayId = app.mp3DownloadThread.curPlayMp3sIdx;
 
@@ -223,7 +223,7 @@ public class Mp3LocalPlayerActivity extends AppCompatActivity {
                 }
             }
 
-            setTitle(TW2CN.getInstance(this).toLocalString(mp3Program.name));
+            setTitle(TW2CN.getInstance(this).toLocal(mp3Program.name));
 
             if (app.mp3DownloadThread == null) {
                 app.mp3DownloadThread = new Mp3DownloadThread(this, mp3s, app.fastFtpServer, maxDownloadFiles, onlyWifi, downloadEvenListener, mp3Program.id);

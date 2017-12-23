@@ -87,7 +87,7 @@ public class Mp3PlayerActivity extends AppCompatActivity {
             }
         });
 
-        setTitle(TW2CN.getInstance(this).toLocalString(mp3Program.name));
+        setTitle(TW2CN.getInstance(this).toLocal(mp3Program.name));
 
         playbackControlView = (PlaybackControlView) findViewById(R.id.playbackControlView);
         playbackControlView.setShowTimeoutMs(0);

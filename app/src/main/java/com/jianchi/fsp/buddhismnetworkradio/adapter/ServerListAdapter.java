@@ -52,7 +52,7 @@ public class ServerListAdapter extends BaseAdapter {
         }
         convertView.setTag(holder);
         TextView txt = (TextView) convertView.findViewById(R.id.txt);
-        txt.setText(TW2CN.getInstance(context).toLocalString(holder.title));
+        txt.setText(TW2CN.getInstance(context).toLocal(holder.title));
         if(holder.title.equals(selectedServer.title)){
             txt.setTextColor(Color.parseColor("#ffff8800"));
         } else {
