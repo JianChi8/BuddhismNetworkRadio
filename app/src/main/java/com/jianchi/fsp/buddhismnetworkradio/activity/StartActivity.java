@@ -26,7 +26,7 @@ import com.jianchi.fsp.buddhismnetworkradio.api.IpInfo;
 import com.jianchi.fsp.buddhismnetworkradio.db.Mp3RecDBManager;
 import com.jianchi.fsp.buddhismnetworkradio.mp3.Mp3Program;
 import com.jianchi.fsp.buddhismnetworkradio.tools.MyLog;
-import com.lijunhuayc.upgrade.helper.UpgradeHelper;
+import com.jianchi.fsp.buddhismnetworkradio.upgrade.UpgradeHelper;
 
 import java.io.IOException;
 import java.util.Collections;

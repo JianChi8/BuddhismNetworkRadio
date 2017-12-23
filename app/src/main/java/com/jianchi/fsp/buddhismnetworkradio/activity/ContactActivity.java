@@ -14,7 +14,7 @@ import com.beardedhen.androidbootstrap.BootstrapButton;
 import com.beardedhen.androidbootstrap.BootstrapLabel;
 import com.jianchi.fsp.buddhismnetworkradio.BApplication;
 import com.jianchi.fsp.buddhismnetworkradio.R;
-import com.lijunhuayc.upgrade.helper.UpgradeHelper;
+import com.jianchi.fsp.buddhismnetworkradio.upgrade.UpgradeHelper;
 
 import java.io.File;
 import java.io.FileOutputStream;

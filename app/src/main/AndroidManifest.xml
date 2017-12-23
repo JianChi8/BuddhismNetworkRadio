@@ -3,10 +3,13 @@
     package="com.jianchi.fsp.buddhismnetworkradio">
 
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <!--- 获取通话状态，以便调整播放器 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--- 横屏竖屏转化时用到 -->
     <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <!--- 隐藏状态栏 -->
     <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
 
     <application
@@ -70,9 +73,6 @@
             android:label="@string/title_activity_local_mp3_manager"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-
         <service android:name=".BMp3Service" />
-
     </application>
-
 </manifest>
