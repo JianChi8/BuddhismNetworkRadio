@@ -133,9 +133,11 @@ public class StartActivity extends AppCompatActivity {
         bt_mp3.setOnCheckedChangedListener(new BootstrapButton.OnCheckedChangedListener() {
             @Override
             public void OnCheckedChanged(BootstrapButton bootstrapButton, boolean isChecked) {
-                Mp3ChannelListAdapter mp3ChannelListAdapter = new Mp3ChannelListAdapter(StartActivity.this, mp3Programs);
-                lv_channel.setAdapter(mp3ChannelListAdapter);
-                isTvChannel = false;
+                if(isChecked) {
+                    Mp3ChannelListAdapter mp3ChannelListAdapter = new Mp3ChannelListAdapter(StartActivity.this, mp3Programs);
+                    lv_channel.setAdapter(mp3ChannelListAdapter);
+                    isTvChannel = false;
+                }
             }
         });
 

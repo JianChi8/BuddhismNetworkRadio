@@ -26,7 +26,7 @@ public class TW2CN {
         isTW = !country.equals("ZH");
     }
 
-    public String toLocale(String str){
+    public String toLocal(String str){
         if(isTW)
             return s2t(str);
         else
