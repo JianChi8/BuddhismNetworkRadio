@@ -1,5 +1,6 @@
 package com.jianchi.fsp.buddhismnetworkradio.activity;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,6 +27,7 @@ import com.jianchi.fsp.buddhismnetworkradio.api.IpInfo;
 import com.jianchi.fsp.buddhismnetworkradio.db.Mp3RecDBManager;
 import com.jianchi.fsp.buddhismnetworkradio.mp3.Mp3Program;
 import com.jianchi.fsp.buddhismnetworkradio.tools.MyLog;
+import com.jianchi.fsp.buddhismnetworkradio.upgrade.EasyDialog;
 import com.jianchi.fsp.buddhismnetworkradio.upgrade.UpgradeHelper;
 
 import java.io.IOException;
@@ -176,8 +178,10 @@ public class StartActivity extends AppCompatActivity {
         UpgradeHelper upgradeHelper = new UpgradeHelper.Builder(this)
                 .setUpgradeUrl(getString(R.string.down_url))
                 .setIsAboutChecking(false)//关于页面手动检测更新需要设置isAboutChecking(true), 启动时检测设为false
-                .build();
+                .build(StartActivity.this);
         upgradeHelper.check();
+
+        //new EasyDialog(upgradeInfoModel, config, mContext).show();
     }
 
 

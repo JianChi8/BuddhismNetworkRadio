@@ -3,8 +3,8 @@ package com.jianchi.fsp.buddhismnetworkradio.upgrade;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.app.AlertDialog;
 import android.net.Uri;
-import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.CheckBox;
@@ -40,15 +40,15 @@ public class EasyDialog {
         cb_ignoreThisVersion = (CheckBox) dialogView.findViewById(R.id.cb_ignoreThisVersion);
         tv_versionName.setText(tw2CN.toLocal("最新版本:"+upgradeInfoModel.getVersionName()));
         String fileSize = String.format("%.2f", upgradeInfoModel.getFileSize()/1024/1024.0);
-        tv_versionName.setText(tw2CN.toLocal("文件大小:"+fileSize));
-        tv_upgradeNotes.setText(tw2CN.toLocal("最新版本:"+upgradeInfoModel.getUpgradeNotes()));
+        tv_fileSize.setText(tw2CN.toLocal("文件大小:"+fileSize));
+        tv_upgradeNotes.setText(tw2CN.toLocal(upgradeInfoModel.getUpgradeNotes()));
     }
 
     public void show() {
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(mContext)
                 .setTitle(tw2CN.toLocal("有新版本"))
                 .setView(dialogView)
-                .setMessage(upgradeInfoModel.getUpgradeNotes())
+                //.setMessage(upgradeInfoModel.getUpgradeNotes())
                 .setCancelable(false);
 
         alertDialog.setPositiveButton(tw2CN.toLocal("立即更新"), new DialogInterface.OnClickListener() {
@@ -59,7 +59,8 @@ public class EasyDialog {
             }
         }).setNegativeButton(tw2CN.toLocal("稍后再说"), null);
 
-        dialog = alertDialog.show();
+        dialog = alertDialog.create();
+        dialog.show();
 
         cb_ignoreThisVersion.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override

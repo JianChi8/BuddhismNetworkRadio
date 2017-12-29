@@ -2,14 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="24dp"
+    android:padding="24dp"
     android:orientation="vertical">
 
     <TextView
         android:id="@+id/tv_versionName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:text="最新版本："
         android:textAppearance="@style/TextAppearance.AppCompat" />
 
@@ -22,16 +21,10 @@
         android:textAppearance="@style/TextAppearance.AppCompat" />
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="更新内容"
-        android:textAppearance="@style/TextAppearance.AppCompat" />
-
-    <TextView
         android:id="@+id/tv_upgradeNotes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
         android:text="TextView"
         android:textAppearance="@style/TextAppearance.AppCompat" />
 
@@ -39,8 +32,7 @@
         android:id="@+id/cb_ignoreThisVersion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:text="忽略此版本"
         android:textAppearance="@style/TextAppearance.AppCompat" />
 </LinearLayout>

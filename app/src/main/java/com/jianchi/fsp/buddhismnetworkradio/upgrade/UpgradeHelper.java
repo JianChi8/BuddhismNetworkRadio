@@ -15,8 +15,8 @@ public class UpgradeHelper {
     private Context mContext;
     private UpgradeConfig config;
 
-    private UpgradeHelper(Builder builder) {
-        this.mContext = builder.getContext();
+    private UpgradeHelper(Builder builder, Context context) {
+        this.mContext = context;
         this.config = builder.getConfig();
         LocalAppInfo.init(mContext);
         MyToast.init(mContext);
@@ -90,8 +90,8 @@ public class UpgradeHelper {
             return this;
         }
 
-        public UpgradeHelper build() {
-            return new UpgradeHelper(this);
+        public UpgradeHelper build(Context context) {
+            return new UpgradeHelper(this, context);
         }
 
     }

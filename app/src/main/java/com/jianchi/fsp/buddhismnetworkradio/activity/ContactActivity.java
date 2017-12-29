@@ -130,7 +130,7 @@ public class ContactActivity extends AppCompatActivity {
                 UpgradeHelper upgradeHelper = new UpgradeHelper.Builder(ContactActivity.this)
                         .setUpgradeUrl(getString(R.string.down_url))
                         .setIsAboutChecking(true)//关于页面手动检测更新需要设置isAboutChecking(true), 启动时检测设为false
-                        .build();
+                        .build(ContactActivity.this);
                 upgradeHelper.check();
             }
         });
